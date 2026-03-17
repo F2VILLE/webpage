@@ -52,16 +52,16 @@ export function App() {
           <span>•</span>
           <span className="highlight">Security</span>
         </div>
-        <div className="mt-2 flex flex-row justify-center items-center">
+        <div className="mt-2 flex flex-row justify-center items-center relative">
           <a href="https://github.com/F2Ville" className="m-2 opacity-75 hover:opacity-100 transition-all">
             <img className="w-6" src={ghLogo} />
           </a>
-          <div className="relative">
+          <div className="">
             <p onClick={() => toggleGPG()} className="text-white cursor-pointer opacity-75 hover:opacity-100">GPG</p>
             <div id="gpg-display" hidden={!showGPG} className="absolute flex justify-center items-center top-[170px] left-0 right-0 bottom-0 text-xs">
-              <div className="bg-[#151515] select-text p-4 text-left text-nowrap border border-white/10 relative">
-                <p className="absolute top-2 right-2 select-none cursor-pointer border border-white/10 p-1 hover:bg-indigo-400/10" onClick={() => copyGPG()}>{copied ? "Copied" : "Copy"}</p>
-                <pre className="w-fit">
+              <div className="bg-[#151515] select-text p-2 text-left text-nowrap border border-white/10 relative">
+                <p className="absolute top-2 right-2 select-none cursor-pointer border border-white/10 p-1 bg-[#151515] hover:bg-[#251d33]" onClick={() => copyGPG()}>{copied ? "Copied" : "Copy"}</p>
+                <pre className="p-2 max-w-[80vw] w-fit overflow-x-scroll">
                   <code>
                     {gpg}
                   </code>

@@ -15,5 +15,5 @@
 }
 
 .highlight {
-  @apply hover:text-indigo-200 transition-colors duration-300
+  @apply hover:text-[#e0bfff] transition-colors duration-300
 }
