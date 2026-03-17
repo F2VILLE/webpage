@@ -15,7 +15,7 @@ const server = serve({
     "/gpg.txt": gpgroute,
     "/f2ville.gpg": gpgroute,
   },
-
+  port: 8386,
   development: process.env.NODE_ENV !== "production" && {
     // Enable browser hot reloading in development
     hmr: true,
