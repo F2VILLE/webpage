@@ -1,0 +1,28 @@
+import { serve } from "bun";
+import index from "./index.html";
+import gpg from "./gpg.txt"
+const gpgroute = {
+  async GET(req) {
+    return new Response(gpg);
+  },
+}
+const server = serve({
+  routes: {
+    // Serve index.html for all unmatched routes.
+    "/*": index,
+
+    "/gpg": gpgroute,
+    "/gpg.txt": gpgroute,
+    "/f2ville.gpg": gpgroute,
+  },
+
+  development: process.env.NODE_ENV !== "production" && {
+    // Enable browser hot reloading in development
+    hmr: true,
+
+    // Echo console logs from the browser to the server
+    console: true,
+  },
+});
+
+console.log(`🚀 Server running at ${server.url}`);
