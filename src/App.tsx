@@ -59,16 +59,26 @@ export function App() {
           <h1 className="text-xl border-b border-[#e0bfff] w-fit pb-2 pr-2 mt-8">Education</h1>
           <div className="flex flex-row">
             <div className="bg-[#e0bfff]/20 w-px mt-2"></div>
-            <div>
+            <div className="">
 
               <div className="p-2 mt-2">
                 <div>
-                  <p className="text-xs opacity-60">2016-2022</p>
-                  <h2>Decroly School</h2>
+                  <p className="text-xs opacity-60">2025-Now</p>
+                  <h2>42 Belgium</h2>
                 </div>
                 <div className="flex flex-col gap-2 p-2 text-xs">
-                  <p className="highlight">High School</p>
-                  <p className="highlight">Options Art, History of Art and Graphic Design</p>
+                  <p className="highlight">Programming school of the 42 Network</p>
+                  <p className="highlight">Learning C and Python3</p>
+                </div>
+              </div>
+
+              <div className="p-2">
+                <div>
+                  <p className="text-xs opacity-60">2023-2025</p>
+                  <h2>Computer Science - ULB</h2>
+                </div>
+                <div className="flex flex-col gap-2 p-2 text-xs">
+                  <p className="highlight">Bachelor in Computer Sciences</p>
                 </div>
               </div>
 
@@ -82,25 +92,18 @@ export function App() {
                 </div>
               </div>
 
+
               <div className="p-2">
                 <div>
-                  <p className="text-xs opacity-60">2023-2025</p>
-                  <h2>Computer Science - ULB</h2>
+                  <p className="text-xs opacity-60">2016-2022</p>
+                  <h2>Decroly School</h2>
                 </div>
                 <div className="flex flex-col gap-2 p-2 text-xs">
-                  <p className="highlight">Bachelor in Computer Sciences</p>
+                  <p className="highlight">High School</p>
+                  <p className="highlight">Options Art, History of Art and Graphic Design</p>
                 </div>
               </div>
-              <div className="p-2">
-                <div>
-                  <p className="text-xs opacity-60">2025-Now</p>
-                  <h2>42 Belgium</h2>
-                </div>
-                <div className="flex flex-col gap-2 p-2 text-xs">
-                  <p className="highlight">Programming school of the 42 Network</p>
-                  <p className="highlight">Learning C and Python3</p>
-                </div>
-              </div>
+
             </div>
           </div>
         </div>
