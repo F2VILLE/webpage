@@ -1,84 +1,53 @@
+import { F2Card } from "./F2Card";
 import "./index.css";
-import ghLogo from "./GitHub Logos/SVG/GitHub_Invertocat_White.svg"
-import mastoLogo from "./mastodon.svg"
-import f2Logo from "./logo.svg"
-import gpg from "./gpg.txt"
-import { useState } from "react";
 
 export function App() {
-  const [selected, setSelected] = useState(false)
-  const [showGPG, setShowGPG] = useState(false)
-  const [copied, setCopied] = useState(false)
-  const selectMatrix = () => {
-    const element = document.getElementById("matrix");
-    if (element) {
-      const selection = window.getSelection();
-      const range = document.createRange();
-      range.selectNodeContents(element);
-      selection?.addRange(range);
-      navigator.clipboard.write([new ClipboardItem({ "text/plain": new Blob(["@f2ville:matrix.urlab.be"], { type: "text/plain" }) })])
-      setTimeout(() => {
-        setSelected(true)
-      }, 200);
-    }
-  }
-  const unselectMatrix = (e: MouseEvent) => {
-    if (document.getSelection && selected) {
-      document.getSelection()?.removeAllRanges();
-      setSelected(false)
-    }
-
-    const gpgDisplay = document.getElementById("gpg-display");
-    if (showGPG && e.target && gpgDisplay && !gpgDisplay.contains(e.target as Node)) {
-      setShowGPG(false);
-    }
-  }
-  const toggleGPG = () => {
-    setShowGPG(!showGPG)
-  }
-  const copyGPG = () => {
-    navigator.clipboard.write([new ClipboardItem({ "text/plain": new Blob([gpg], { type: "text/plain" }) })])
-    setCopied(true)
-    setTimeout(() => {
-      setCopied(false)
-    }, 400);
-  }
   return (
-    <div className="w-full h-[80vh] p-8 text-center flex justify-center items-center z-10" onClick={(e) => unselectMatrix(e)}>
-      <div className="w-fit">
-        <h1 className="text-xl text-white">F2VILLE</h1>
-        <p id="matrix" className="text-sm select-text opacity-50 cursor-pointer" onClick={() => selectMatrix()}>@f2ville:matrix.urlab.be</p>
-        <div className="mt-2 flex flex-row justify-between text-sm gap-2 separators">
-          <span className="highlight">Web dev</span>
-          <span>•</span>
-          <span className="highlight">Software</span>
-          <span>•</span>
-          <span className="highlight">Security</span>
-        </div>
-        <div className="mt-2 flex flex-row justify-center items-center relative">
-          <a href="https://github.com/F2Ville" className="m-2 opacity-75 hover:opacity-100 transition-all">
-            <img className="w-6" src={ghLogo} />
-          </a>
-          <div className="">
-            <p onClick={() => toggleGPG()} className="text-white cursor-pointer opacity-75 hover:opacity-100">GPG</p>
-            <div id="gpg-display" hidden={!showGPG} className="absolute flex justify-center items-center top-42.5 left-0 right-0 bottom-0 text-xs">
-              <div className="bg-[#151515] select-text p-2 text-left text-nowrap border border-white/10 relative">
-                <p className="absolute top-2 right-2 select-none cursor-pointer border border-white/10 p-1 bg-[#151515] hover:bg-[#251d33]" onClick={() => copyGPG()}>{copied ? "Copied" : "Copy"}</p>
-                <pre className="p-2 max-w-[80vw] w-fit overflow-x-scroll">
-                  <code>
-                    {gpg}
-                  </code>
-                </pre>
-              </div>
-            </div>
+    <>
+      <F2Card />
+      <div className="bg-black/10 w-full h-[90vh] p-16">
+        <h1 className="text-xl border-b border-[#e0bfff] w-fit pb-2 pr-2">Skills</h1>
+        <div className="p-2 mt-2">
+          <h2>Programming</h2>
+          <div className="flex flex-row gap-4 p-2 text-xs">
+            <p className="highlight">HTML</p>
+            <p className="highlight">CSS</p>
+            <p className="highlight">JavaScript</p>
+            <p className="highlight">TypeScript</p>
+            <p className="highlight">C</p>
           </div>
-          <a rel="me" href="https://mastodon.social/@f2ville" className="m-2 opacity-75 hover:opacity-100 transition-all">
-            <img className="w-6" src={mastoLogo} />
-          </a>
+        </div>
+
+        <div className="p-2">
+          <h2>System Administration</h2>
+          <div className="flex flex-row gap-4 p-2 text-xs">
+            <p className="highlight">Docker</p>
+            <p className="highlight">Linux (Debian / Ubuntu / Arch)</p>
+            <p className="highlight">Proxmox</p>
+          </div>
+        </div>
+
+        <div className="p-2">
+          <h2>Languages</h2>
+          <div className="flex flex-row gap-4 p-2 text-xs">
+            <p className="highlight">French (Native)</p>
+            <p className="highlight">English (~B2)</p>
+            <p className="highlight">Japanese (~A1)</p>
+          </div>
+        </div>
+
+        <div className="p-2">
+          <h2>Miscellaneous</h2>
+          <div className="flex flex-row gap-4 p-2 text-xs">
+            <p className="highlight">Figma / Adobe Illustrator</p>
+            <p className="highlight">Adobe Photoshop</p>
+            <p className="highlight">Adobe Premiere</p>
+            <p className="highlight">Blender (3D)</p>
+          </div>
         </div>
 
       </div>
-    </div>
+    </>
   );
 }
 

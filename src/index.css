@@ -5,6 +5,11 @@
     @apply text-[rgba(255,255,255,0.87)] bg-[#242424] font-sans;
   }
 
+  * {
+    scroll-behavior: smooth;
+    outline: none !important;
+  }
+
   body {
     @apply w-screen h-screen relative m-0 select-none;
   }
