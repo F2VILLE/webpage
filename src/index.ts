@@ -16,7 +16,6 @@ const server = serve({
     "/gpg": gpgroute,
     "/gpg.txt": gpgroute,
     "/f2ville.gpg": gpgroute,
-    "/logo.svg": Bun.file("./logo-colored.svg")
   },
   port: 8386,
   development: process.env.NODE_ENV !== "production" && {
