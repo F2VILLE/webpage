@@ -1,5 +1,6 @@
 import { serve } from "bun";
 import index from "./index.html";
+import page404 from "./404.html"
 import gpg from "./gpg.txt"
 
 const gpgroute = {
@@ -9,9 +10,10 @@ const gpgroute = {
 }
 const server = serve({
   routes: {
-    // Serve index.html for all unmatched routes.
-    "/*": index,
-
+    "/*": page404,
+    "/": index,
+    "/robots.txt": Bun.file("./src/robots.txt"),
+    "/logo.svg": Bun.file("./src/logo-colored.svg"),
     "/gpg": gpgroute,
     "/gpg.txt": gpgroute,
     "/f2ville.gpg": gpgroute,
