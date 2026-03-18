@@ -4,7 +4,6 @@ import letterLogo from "./letter.svg"
 import gpg from "./gpg.txt"
 import { useState } from "react";
 
-
 export function F2Card() {
 	const [selected, setSelected] = useState(false)
 	const [showGPG, setShowGPG] = useState(false)
@@ -45,7 +44,7 @@ export function F2Card() {
 	}
 
 	return (
-		<div className="w-full h-[95vh] p-8 text-center flex justify-center items-center z-10" onClick={(e) => unselectMatrix(e)}>
+		<div className="w-full h-[95vh] p-8 text-center flex justify-center items-center z-10 relative" onClick={(e) => unselectMatrix(e)}>
 			<div className="w-fit">
 				<h1 className="text-xl text-white">F2VILLE</h1>
 				<p id="matrix" className="text-sm select-text opacity-50 cursor-pointer" onClick={() => selectMatrix()}>@f2ville:matrix.urlab.be</p>
@@ -86,7 +85,17 @@ export function F2Card() {
 
 					</div>
 				</div>
-
+			</div>
+			<div className="absolute bottom-10 left-0 right-0 mx-auto w-fit cursor-pointer py-4 px-8" onClick={(e) => {
+				e.stopPropagation();
+				document.getElementById("resume")?.scrollIntoView({ behavior: "smooth" });
+			}}>
+				<div className="flex flex-col justify-center items-center opacity-60">
+					<div className="gradwhite w-1 h-8"></div>
+					<div className="bg-white w-4 h-4 rounded-full mt-1 flex justify-center items-center">
+					<div className="bg-[#242424] w-2 h-2 rounded-full"></div>
+					</div>
+				</div>
 			</div>
 		</div>
 	)

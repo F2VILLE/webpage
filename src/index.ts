@@ -1,8 +1,7 @@
 import { serve } from "bun";
 import index from "./index.html";
 import gpg from "./gpg.txt"
-import logo from "./logo-colored.svg"
-import fs from "fs"
+
 const gpgroute = {
   async GET(req) {
     return new Response(gpg);

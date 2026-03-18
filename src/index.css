@@ -22,3 +22,8 @@
 .highlight {
   @apply hover:text-[#e0bfff] transition-colors duration-300
 }
+
+.gradwhite {
+  background: linear-gradient(to bottom, #fff0, #fff);
+}
+
