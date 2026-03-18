@@ -1,6 +1,7 @@
 import "./index.css";
 import ghLogo from "./GitHub Logos/SVG/GitHub_Invertocat_White.svg"
 import mastoLogo from "./mastodon.svg"
+import f2Logo from "./logo.svg"
 import gpg from "./gpg.txt"
 import { useState } from "react";
 
