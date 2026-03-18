@@ -1,19 +1,23 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta property="og:title" content="F2VILLE.dev" />
-    <meta property="og:description" content="Web / Software developer" />
-    <meta property="og:image" content="https://f2ville.dev/logo.svg" />
-    <meta property="og:url" content="https://f2ville.dev" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="theme-color" content="#e0bfff" />
-    <meta property="og:image:width" content="64" />
-    <meta property="og:image:height" content="64" />
-    <link rel="icon" type="image/svg+xml" href="./logo-colored.svg" />
-    <title>F2Ville</title>
-  </head>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" content="F2VILLE.dev" />
+  <meta property="og:description" content="Web / Software developer" />
+  <meta property="description" content="Web / Software developer" />
+  <link rel="canonical" href="https://f2ville.dev/">
+  <meta property="og:image" content="https://f2ville.dev/logo.svg" />
+  <meta property="og:url" content="https://f2ville.dev" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta property="og:type" content="profile">
+  <meta name="theme-color" content="#e0bfff" />
+  <meta property="og:image:width" content="64" />
+  <meta property="og:image:height" content="64" />
+  <link rel="icon" type="image/svg+xml" href="./logo-colored.svg" />
+  <title>F2Ville</title>
+</head>
 <!--                                                              
                                                              
 ██████ ████▄ ██  ██ ▄▄ ▄▄    ▄▄    ▄▄▄▄▄   ▄▄▄▄  ▄▄▄▄▄ ▄▄ ▄▄ 
@@ -22,9 +26,27 @@
 
 -->
 
- <body>
-    <div id="root"></div>
-    <script type="module" src="./frontend.tsx"></script>
-    <a hidden rel="me" href="https://mastodon.social/@f2ville">Mastodon</a>
-  </body>
+<body>
+  <div id="root"></div>
+  <script type="module" src="./frontend.tsx"></script>
+  <a hidden rel="me" href="https://mastodon.social/@f2ville">Mastodon</a>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "F2VILLE",
+  "url": "https://f2ville.dev",
+  "image": "https://f2ville.dev/logo.svg",
+  "description": "Web developer, software engineer, security enthusiast",
+  "jobTitle": "Full Stack Developer",
+  "email": "contact@f2ville.dev",
+  "sameAs": [
+    "https://github.com/F2Ville",
+    "https://mastodon.social/@f2ville"
+  ],
+  "knowsAbout": ["TypeScript", "React", "Python", "Docker", "Linux", "C"]
+}
+</script>
+</body>
+
 </html>

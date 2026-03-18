@@ -12,6 +12,7 @@ const server = serve({
   routes: {
     "/*": page404,
     "/": index,
+    "/sitemap.xml": Bun.file("./src/sitemap.xml"),
     "/robots.txt": Bun.file("./src/robots.txt"),
     "/logo.svg": Bun.file("./src/logo-colored.svg"),
     "/gpg": gpgroute,

@@ -58,14 +58,14 @@ export function F2Card() {
 				<div>
 					<div className="mt-2 flex flex-row justify-center items-center relative">
 						<a href="https://github.com/F2Ville" className="m-2 opacity-75 hover:opacity-100 transition-all">
-							<img className="w-6" src={ghLogo} />
+							<img alt="GitHub" className="w-6" src={ghLogo} />
 						</a>
 						<a href="mailto:contact@f2ville.dev" className="m-2 opacity-75 hover:opacity-100 transition-all">
-							<img className="w-8" src={letterLogo} />
+							<img alt="Mail" className="w-8" src={letterLogo} />
 						</a>
 
 						<a rel="me" href="https://mastodon.social/@f2ville" className="m-2 opacity-75 hover:opacity-100 transition-all">
-							<img className="w-6" src={mastoLogo} />
+							<img alt="Mastodon" className="w-6" src={mastoLogo} />
 						</a>
 					</div>
 					<div className="flex flex-row justify-center items-center relative">
