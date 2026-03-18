@@ -6,7 +6,7 @@ export function App() {
     <>
       <F2Card />
       <div className="bg-black/10 w-full min-h-[90vh] p-16 flex flex-col items-center">
-        <div className="w-[80vw] max-w-125">
+        <div className="w-[80vw] 2xl:max-w-125">
           <h1 className="text-xl border-b border-[#e0bfff] w-fit pb-2 pr-2">Skills</h1>
           <div className="p-2 mt-2">
             <h2>Programming</h2>

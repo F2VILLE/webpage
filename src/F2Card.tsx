@@ -1,5 +1,6 @@
 import ghLogo from "./GitHub Logos/SVG/GitHub_Invertocat_White.svg"
 import mastoLogo from "./mastodon.svg"
+import letterLogo from "./letter.svg"
 import gpg from "./gpg.txt"
 import { useState } from "react";
 
@@ -55,27 +56,37 @@ export function F2Card() {
 					<span>•</span>
 					<span className="highlight">Security</span>
 				</div>
-				<div className="mt-2 flex flex-row justify-center items-center relative">
-					<a href="https://github.com/F2Ville" className="m-2 opacity-75 hover:opacity-100 transition-all">
-						<img className="w-6" src={ghLogo} />
-					</a>
-					<div className="">
-						<p onClick={() => toggleGPG()} className="text-white cursor-pointer opacity-75 hover:opacity-100">GPG</p>
-						<div id="gpg-display" hidden={!showGPG} className="absolute flex justify-center items-center top-42.5 left-0 right-0 bottom-0 text-xs">
-							<div className="bg-[#151515] select-text p-2 text-left text-nowrap border border-white/10 relative">
-								<p className="absolute top-2 right-2 select-none cursor-pointer border border-white/10 p-1 bg-[#151515] hover:bg-[#251d33]" onClick={() => copyGPG()}>{copied ? "Copied" : "Copy"}</p>
-								<pre className="p-2 max-w-[80vw] w-fit overflow-x-scroll">
-									<code>
-										{gpg}
-									</code>
-								</pre>
+				<div>
+					<div className="mt-2 flex flex-row justify-center items-center relative">
+						<a href="https://github.com/F2Ville" className="m-2 opacity-75 hover:opacity-100 transition-all">
+							<img className="w-6" src={ghLogo} />
+						</a>
+						<a href="mailto:contact@f2ville.dev" className="m-2 opacity-75 hover:opacity-100 transition-all">
+							<img className="w-8" src={letterLogo} />
+						</a>
+
+						<a rel="me" href="https://mastodon.social/@f2ville" className="m-2 opacity-75 hover:opacity-100 transition-all">
+							<img className="w-6" src={mastoLogo} />
+						</a>
+					</div>
+					<div className="flex flex-row justify-center items-center relative">
+						<div className="">
+							<p onClick={() => toggleGPG()} className="text-white cursor-pointer opacity-75 hover:opacity-100">GPG</p>
+							<div id="gpg-display" hidden={!showGPG} className="absolute flex justify-center items-center top-42.5 left-0 right-0 bottom-0 text-xs">
+								<div className="bg-[#151515] select-text p-2 text-left text-nowrap border border-white/10 relative">
+									<p className="absolute top-2 right-2 select-none cursor-pointer border border-white/10 p-1 bg-[#151515] hover:bg-[#251d33]" onClick={() => copyGPG()}>{copied ? "Copied" : "Copy"}</p>
+									<pre className="p-2 max-w-[80vw] w-fit overflow-x-scroll">
+										<code>
+											{gpg}
+										</code>
+									</pre>
+								</div>
 							</div>
 						</div>
+
 					</div>
-					<a rel="me" href="https://mastodon.social/@f2ville" className="m-2 opacity-75 hover:opacity-100 transition-all">
-						<img className="w-6" src={mastoLogo} />
-					</a>
 				</div>
+
 			</div>
 		</div>
 	)
