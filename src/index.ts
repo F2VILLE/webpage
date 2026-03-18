@@ -1,6 +1,8 @@
 import { serve } from "bun";
 import index from "./index.html";
 import gpg from "./gpg.txt"
+import logo from "./logo-colored.svg"
+import fs from "fs"
 const gpgroute = {
   async GET(req) {
     return new Response(gpg);
@@ -14,6 +16,11 @@ const server = serve({
     "/gpg": gpgroute,
     "/gpg.txt": gpgroute,
     "/f2ville.gpg": gpgroute,
+    "/logo.svg": {
+      async GET(req) {
+        return new Response(fs.readFileSync(logo))
+      }
+    }
   },
   port: 8386,
   development: process.env.NODE_ENV !== "production" && {
