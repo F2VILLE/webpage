@@ -19,6 +19,7 @@ export function App() {
                   <p className="highlight">JavaScript</p>
                   <p className="highlight">TypeScript</p>
                   <p className="highlight">C</p>
+                  <p className="highlight">Python</p>
                 </div>
               </div>
 
