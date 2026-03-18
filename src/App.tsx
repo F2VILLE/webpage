@@ -7,7 +7,7 @@ export function App() {
       <F2Card />
       <div className="bg-black/10 w-full min-h-[90vh] p-16 flex flex-col items-center" id="resume">
         <div className="w-[80vw] 2xl:max-w-125">
-          <h1 className="text-xl border-b border-[#e0bfff] w-fit pb-2 pr-2">Skills</h1>
+          <p className="text-xl border-b border-[#e0bfff] w-fit pb-2 pr-2">Skills</p>
           <div className="flex flex-row">
             <div className="bg-[#e0bfff]/20 w-px mt-2"></div>
             <div>
@@ -56,7 +56,7 @@ export function App() {
             </div>
           </div>
 
-          <h1 className="text-xl border-b border-[#e0bfff] w-fit pb-2 pr-2 mt-8">Education</h1>
+          <p className="text-xl border-b border-[#e0bfff] w-fit pb-2 pr-2 mt-8">Education</p>
           <div className="flex flex-row">
             <div className="bg-[#e0bfff]/20 w-px mt-2"></div>
             <div className="">
