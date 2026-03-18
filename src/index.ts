@@ -14,7 +14,7 @@ const server = serve({
     "/": index,
     "/sitemap.xml": Bun.file("./src/sitemap.xml"),
     "/robots.txt": Bun.file("./src/robots.txt"),
-    "/logo.svg": Bun.file("./src/logo-colored.svg"),
+    "/logo.png": Bun.file("./src/logo-colored.png"),
     "/gpg": gpgroute,
     "/gpg.txt": gpgroute,
     "/f2ville.gpg": gpgroute,

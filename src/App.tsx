@@ -67,7 +67,7 @@ export function App() {
                   <h2>42 Belgium</h2>
                 </div>
                 <div className="flex flex-col gap-2 p-2 text-xs">
-                  <p className="highlight">Programming school of the 42 Network</p>
+                  <p className="highlight">Programming school part of the 42 Network</p>
                   <p className="highlight">Learning C and Python3</p>
                 </div>
               </div>
