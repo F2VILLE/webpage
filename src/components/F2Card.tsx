@@ -1,7 +1,7 @@
-import ghLogo from "./GitHub Logos/SVG/GitHub_Invertocat_White.svg"
-import mastoLogo from "./mastodon.svg"
-import letterLogo from "./letter.svg"
-import gpg from "./gpg.txt"
+import ghLogo from "../assets/GitHub Logos/SVG/GitHub_Invertocat_White.svg"
+import mastoLogo from "../assets/mastodon.svg"
+import letterLogo from "../assets/letter.svg"
+import gpg from "../assets/gpg.txt"
 import { useState } from "react";
 
 export function F2Card() {
@@ -44,7 +44,7 @@ export function F2Card() {
 	}
 
 	return (
-		<div className="w-full h-[95vh] p-8 text-center flex justify-center items-center z-10 relative" onClick={(e) => unselectMatrix(e)}>
+		<div className="w-full h-[95vh] p-8 text-center flex justify-center items-center z-10 relative select-none" onClick={(e) => unselectMatrix(e)}>
 			<div className="w-fit">
 				<h1 className="text-xl text-white">F2VILLE</h1>
 				<p id="matrix" className="text-sm select-text opacity-50 cursor-pointer" onClick={() => selectMatrix()}>@f2ville:matrix.urlab.be</p>

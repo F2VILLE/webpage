@@ -1,7 +1,7 @@
 import { serve } from "bun";
 import index from "./index.html";
 import page404 from "./404.html"
-import gpg from "./gpg.txt"
+import gpg from "./assets/gpg.txt"
 
 const gpgroute = {
   async GET(req) {
@@ -12,9 +12,9 @@ const server = serve({
   routes: {
     "/*": page404,
     "/": index,
-    "/sitemap.xml": Bun.file("./src/sitemap.xml"),
-    "/robots.txt": Bun.file("./src/robots.txt"),
-    "/logo.png": Bun.file("./src/logo-colored.png"),
+    "/sitemap.xml": Bun.file("./src/assets/sitemap.xml"),
+    "/robots.txt": Bun.file("./src/assets/robots.txt"),
+    "/logo.png": Bun.file("./src/assets/logo-colored.png"),
     "/gpg": gpgroute,
     "/gpg.txt": gpgroute,
     "/f2ville.gpg": gpgroute,

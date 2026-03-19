@@ -11,7 +11,7 @@
   }
 
   body {
-    @apply w-screen h-screen relative m-0 select-none;
+    @apply w-screen h-screen relative m-0;
   }
 
   #root {
