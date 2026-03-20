@@ -35,7 +35,7 @@ setInterval(() => {
     lastPlaying = nowPlaying
   }
 
-  if (Date.now() - lastNowPlayingUpdate > 5 * 60 * 1000) {
+  if (Date.now() - lastNowPlayingUpdate > 20 * 60 * 1000) {
     nowPlaying = {
       title: "",
       artist: "",
