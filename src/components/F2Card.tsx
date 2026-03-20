@@ -93,7 +93,7 @@ export function F2Card() {
 				<div className="flex flex-col justify-center items-center opacity-60">
 					<div className="gradwhite w-1 h-8"></div>
 					<div className="bg-white w-4 h-4 rounded-full mt-1 flex justify-center items-center">
-					<div className="bg-[#242424] w-2 h-2 rounded-full"></div>
+						<div className="bg-[#242424] w-2 h-2 rounded-full"></div>
 					</div>
 				</div>
 			</div>
