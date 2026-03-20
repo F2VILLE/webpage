@@ -33,7 +33,9 @@ setInterval(() => {
       s.send(JSON.stringify(nowPlaying))
     }
     lastPlaying = nowPlaying
+    lastNowPlayingUpdate = Date.now()
   }
+  
 
   if (Date.now() - lastNowPlayingUpdate > 20 * 60 * 1000) {
     nowPlaying = {
