@@ -30,7 +30,7 @@ async function sendTrackUpdate(track: string, status: string): Promise<void> {
 	const data = JSON.stringify({ title, artist, status });
 
 	console.log("Sending track update:", data);
-	await fetch("http://localhost:8386/api/musica", {
+	await fetch("https://f2ville.dev/api/musica", {
 		method: "POST",
 		headers: {
 			"Content-Type": "application/json",

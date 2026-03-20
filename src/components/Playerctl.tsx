@@ -10,7 +10,7 @@ export function Playerctl() {
 	useEffect(() => {
 		const hostname = window.location.hostname
 		const port = window.location.port
-		const ws = new WebSocket(`ws://${hostname}:${port}/musica`)
+		const ws = new WebSocket(`ws://f2ville.dev/musica`)
 
 
 		ws.onmessage = (event) => {
