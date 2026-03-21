@@ -27,3 +27,9 @@
   background: linear-gradient(to bottom, #fff0, #fff);
 }
 
+#webcard {
+  background: url("./assets/wp.png");
+  filter: blur(50px) brightness(1.1) contrast(1.2);
+  background-blend-mode: overlay;
+  opacity: 0.2;
+}

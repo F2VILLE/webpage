@@ -27,7 +27,7 @@ export function Playerctl() {
 	}, [])
 
 	return (
-		<div className="flex justify-center items-center absolute top-0 left-0 w-full h-fit z-20">
+		<div className="flex justify-center items-center absolute top-0 mt-8 left-0 w-full h-fit z-20">
 			{nowPlaying && nowPlaying.status == "Playing" && (
 				<div className="scale-90 w-fit opacity-50 hover:opacity-75 transition-all text-nowrap text-xs p-2 rounded-full border border-white/10 m-2 flex flex-row justify-between items-center">
 					<p className="text-lg mr-2">🔊</p>
