@@ -28,7 +28,7 @@
 }
 
 #webcard {
-  background: url("./assets/wp.png");
+  background: url("./assets/wp.jpg");
   filter: blur(28px) brightness(1.4) contrast(1.2);
   background-size: cover;
   background-blend-mode: overlay;
