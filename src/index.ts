@@ -2,8 +2,10 @@ import { serve } from "bun";
 import index from "./index.html";
 import page404 from "./404.html"
 import gpg from "./assets/gpg.txt"
+import "dotenv/config"
 
 const bunport = 8386
+
 
 const gpgroute = {
   async GET(req) {
@@ -28,6 +30,15 @@ let nowPlaying: TrackData = {
 let lastPlaying: TrackData = nowPlaying
 
 setInterval(() => {
+
+  if (process.env.MOCK_NOW_PLAYING) {
+    nowPlaying = {
+      title: "Mock Song",
+      artist: "Mock Artist",
+      status: "Playing"
+    }
+    return ;
+  }
   if (nowPlaying != lastPlaying) {
     for (const s of sockets) {
       s.send(JSON.stringify(nowPlaying))
@@ -35,7 +46,7 @@ setInterval(() => {
     lastPlaying = nowPlaying
     lastNowPlayingUpdate = Date.now()
   }
-  
+
 
   if (Date.now() - lastNowPlayingUpdate > 20 * 60 * 1000) {
     nowPlaying = {
