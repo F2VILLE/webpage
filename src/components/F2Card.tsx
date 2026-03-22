@@ -71,9 +71,9 @@ export function F2Card() {
 					<div className="flex flex-row justify-center items-center relative">
 						<div className="">
 							<p onClick={() => toggleGPG()} className="text-white cursor-pointer opacity-75 hover:opacity-100">GPG</p>
-							<div id="gpg-display" hidden={!showGPG} className="absolute flex justify-center items-center top-42.5 left-0 right-0 bottom-0 text-xs">
-								<div className="bg-[#151515] select-text p-2 text-left text-nowrap border border-white/10 relative">
-									<p className="absolute top-2 right-2 select-none cursor-pointer border border-white/10 p-1 bg-[#151515] hover:bg-[#251d33]" onClick={() => copyGPG()}>{copied ? "Copied" : "Copy"}</p>
+							<div id="gpg-display" hidden={!showGPG} className="absolute flex justify-center items-center top-40 left-0 right-0 bottom-0 text-xs">
+								<div className="bg-[#15151555] select-text p-2 text-left text-nowrap border border-white/10 relative">
+									<p className="absolute top-2 right-2 select-none cursor-pointer border border-white/10 p-1 bg-[#15151555] hover:bg-[#33241d]" onClick={() => copyGPG()}>{copied ? "Copied" : "Copy"}</p>
 									<pre className="p-2 max-w-[80vw] w-fit overflow-x-scroll">
 										<code>
 											{gpg}
